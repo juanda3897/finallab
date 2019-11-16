@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from'@angular/forms';
-import {MatAutocompleteModule, MatInputModule, MatCheckbox, MatCheckboxModule, MatRadioButton, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatFormField, MatFormFieldModule, MatSelectModule, MatSliderModule, MatSlideToggleModule } from '@angular/material';
+import { MatButtonModule, MatAutocompleteModule, MatInputModule, MatCheckbox, MatCheckboxModule, MatRadioButton, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatFormField, MatFormFieldModule, MatSelectModule, MatSliderModule, MatSlideToggleModule } from '@angular/material';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
@@ -22,7 +22,17 @@ import { PrimeroComponent } from './primero/primero.component';
 import { SegundoComponent } from './segundo/segundo.component';
 import { TerceroComponent } from './tercero/tercero.component';
 import { CuartoComponent } from './cuarto/cuarto.component';
+import { SolicitudComponent } from './solicitud/solicitud.component';
+import { LoginComponent} from './login/login.component';
+import { ButtonComponent } from './components/button/button.component';
+import { FormfieldloginComponent } from './login/formfieldlogin/formfieldlogin.component';
+import { ButtonloginComponent } from './login/buttonlogin/buttonlogin.component';
 
+const MaterialComponents =[
+  MatButtonModule,
+  MatDatepickerModule, 
+  MatNativeDateModule
+];
 
 @NgModule({
   declarations: [
@@ -39,7 +49,12 @@ import { CuartoComponent } from './cuarto/cuarto.component';
     PrimeroComponent,
     SegundoComponent,
     TerceroComponent,
-    CuartoComponent
+    CuartoComponent,
+    SolicitudComponent,
+    LoginComponent,
+    ButtonComponent,
+    FormfieldloginComponent,
+    ButtonloginComponent
  
   ],
   imports: [
@@ -58,10 +73,14 @@ import { CuartoComponent } from './cuarto/cuarto.component';
     MatInputModule,
     MatSelectModule, 
     MatSliderModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatNativeDateModule,
+    MaterialComponents,
 
 
   ],
+
+  exports : [MaterialComponents],
   providers: [],
   bootstrap: [AppComponent]
 })
