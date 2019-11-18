@@ -27,6 +27,9 @@ import { LoginComponent} from './login/login.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FormfieldloginComponent } from './login/formfieldlogin/formfieldlogin.component';
 import { ButtonloginComponent } from './login/buttonlogin/buttonlogin.component';
+import { AuxiliarComponent } from './Users/auxiliar/auxiliar.component';
+import { AlumnoComponent } from './Users/alumno/alumno.component';
+import { DocenteComponent } from './Users/docente/docente.component';
 
 const MaterialComponents =[
   MatButtonModule,
@@ -54,7 +57,10 @@ const MaterialComponents =[
     LoginComponent,
     ButtonComponent,
     FormfieldloginComponent,
-    ButtonloginComponent
+    ButtonloginComponent,
+    AuxiliarComponent,
+    AlumnoComponent,
+    DocenteComponent
  
   ],
   imports: [
